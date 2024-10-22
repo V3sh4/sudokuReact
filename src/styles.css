@@ -1,0 +1,69 @@
+/* src/styles.css */
+.App {
+  text-align: center;
+}
+
+.sudoku-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sudoku-board {
+  display: inline-block;
+  border: 2px solid #333;
+  padding: 10px;
+}
+
+.sudoku-row {
+  display: flex;
+}
+
+.sudoku-cell {
+  width: 40px;
+  height: 40px;
+  text-align: center;
+  font-size: 24px;
+  margin: 0; /* Usuwamy margines, by nie było przerw */
+  border: 1px solid #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sudoku-cell.fixed {
+  background-color: #eee; /* Kolor dla niezmienialnych komórek */
+  cursor: default; /* Domyślny kursor dla niezmienialnych komórek */
+}
+
+.sudoku-cell.editable {
+    color:blue;
+    background-color: white;
+}
+
+/* Pogrubienie linii dla kwadratów 3x3 */
+.sudoku-row:nth-child(3n) {
+  border-bottom: 2px solid #333; /* Pogrubienie dolnej granicy co 3 wiersze */
+}
+
+.sudoku-cell:nth-child(3n) {
+  border-right: 2px solid #333; /* Pogrubienie prawej granicy co 3 kolumny */
+    /* src/styles.css */
+
+}
+
+.sudoku-cell.invalid {
+  background-color: rgba(255, 0, 0, 0.3); /* Jasno czerwone tło dla nieprawidłowego kwadratu */
+}
+
+
+
+.number-picker {
+  margin-top: 10px;
+}
+
+.number-picker button {
+  margin: 2px;
+  padding: 5px 10px;
+  font-size: 16px;
+}
